@@ -447,19 +447,16 @@ public class ARTemplateMenuManager : MonoBehaviour
     var currentFocusedObject = m_InteractionGroup.focusInteractable;
     if (currentFocusedObject != null)
     {
-        // Получаем компонент ColorMaterialPropertyAffordanceReceiver
+        // ГЏГ®Г«ГіГ·Г ГҐГ¬ ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІ ColorMaterialPropertyAffordanceReceiver
         var colorReceiver = currentFocusedObject.transform.GetComponent<ColorMaterialPropertyAffordanceReceiver>();
         if (colorReceiver != null)
         {
-            // Создаем новый цвет (например, случайный цвет)
+            // Г‘Г®Г§Г¤Г ГҐГ¬ Г­Г®ГўГ»Г© Г¶ГўГҐГІ (Г­Г ГЇГ°ГЁГ¬ГҐГ°, Г±Г«ГіГ·Г Г©Г­Г»Г© Г¶ГўГҐГІ)
             Color newColor = new Color(Random.value, Random.value, Random.value, 1.0f);
-
-            // Вызываем метод OnAffordanceValueUpdated для изменения цвета
-            colorReceiver.UpdateColor(newColor);
         }
         else
         {
-            Debug.LogWarning("ColorMaterialPropertyAffordanceReceiver не найден на объекте.");
+            Debug.LogWarning("ColorMaterialPropertyAffordanceReceiver Г­ГҐ Г­Г Г©Г¤ГҐГ­ Г­Г  Г®ГЎГєГҐГЄГІГҐ.");
         }
     }
 }
